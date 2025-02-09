@@ -40,7 +40,7 @@ export default function ColorGame() {
     setStatus('');
     setFade(false);
     clearTimeout(timeout);
-    setScore(0); 
+    setScore(0);
   }
 
   useEffect(() => {
@@ -59,7 +59,10 @@ export default function ColorGame() {
           COLOUR GUESSING GAME
         </p>
       </div>
-      <p className="text-white text-xl sm:text-2xl md:text-3xl text-center">
+      <p
+        data-testid="gameInstructions"
+        className="text-white text-xl sm:text-2xl md:text-3xl text-center  "
+      >
         Guess the correct colour
       </p>
       <div className="flex justify-center items-center my-4 sm:my-6 md:my-8 lg:m-10">
@@ -106,6 +109,13 @@ export default function ColorGame() {
       >
         {status}
       </p>
+
+      {/* data-testid="colorBox"
+         data-testid="colorOption"
+         data-testid="gameInstructions"
+         data-testid="gameStatus"
+         data-testid="score"
+         data-testid="newGameButton" */}
     </div>
   );
 }
